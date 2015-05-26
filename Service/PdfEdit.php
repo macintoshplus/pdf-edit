@@ -1,4 +1,9 @@
 <?php
+/**
+ * This file is part of Pdf-Edit Library
+ * @author Macintoshplus <jb@nahan.fr>
+ * @licence MIT
+ */
 
 namespace Jbnahan\PdfEdit\Service;
 
