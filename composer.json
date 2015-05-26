@@ -1,0 +1,23 @@
+{
+    "name": "jbnahan/pdf-edit",
+    "description": "Load and add text into PDF",
+    "homepage": "https://github.com/macintoshplus/pdf-edit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MacintoshPlus",
+            "role": "Developer",
+            "homepage": "https://github.com/macintoshplus"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": ">2.2",
+        "setasign/fpdi-fpdf": "~1.5"
+    },
+    "autoload": {
+        "psr-0": { "Jbnahan\\PdfEdit": "" }
+    },
+
+    "target-dir": "Jbnahan/PdfEdit"
+}
