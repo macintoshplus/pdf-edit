@@ -5,24 +5,23 @@
  * @licence MIT
  */
 
-
 namespace Jbnahan\PdfEdit\Specification;
 
 abstract class CompositeSpecification implements SpecificationInterface
 {
 	abstract public function isSatisfiedBy($object);
 
-	public function and(SpecificationInterface $other)
+	public function addAnd(SpecificationInterface $other)
 	{
 		return new AndSpecification($this, $other);
 	}
 
-	public function or(SpecificationInterface $other)
+	public function addOr(SpecificationInterface $other)
 	{
 		return new OrSpecification($this, $other);
 	}
 
-	public function not()
+	public function negate()
 	{
 		return new NotSpecification($this);
 	}

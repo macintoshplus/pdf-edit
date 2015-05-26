@@ -60,19 +60,15 @@ class PdfEdit
 
 	}
 
-	private function extractPage($number)
-	{
-		return $this->pdf->importPage($number);
-	}
-
 	/**
 	 * add next page into pdf
 	 */
 	private function addNextPage()
 	{
-		$this->addNextPage++;
+		$this->currentPage++;
+		$tpl = $this->pdf->importPage($this->currentPage);
 		$this->pdf->addPage($this->config['orientation'], $this->config['size']);
-		$this->pdf->useTemplate($this->extractPage($this->currentPage));
+		$this->pdf->useTemplate($tpl);
 
 		$this->pdf->setFont($this->config['font']);
 		$this->pdf->setFontSize($this->config['font-size']);

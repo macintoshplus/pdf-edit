@@ -8,11 +8,11 @@
 
 namespace Jbnahan\PdfEdit\Specification;
 
-class SpecificationInterface
+interface SpecificationInterface
 {
 	public function isSatisfiedBy($object);
 
-	public function and(SpecificationInterface $other);
-	public function or(SpecificationInterface $other);
-	public function not();
+	public function addAnd(SpecificationInterface $other);
+	public function addOr(SpecificationInterface $other);
+	public function negate();
 }

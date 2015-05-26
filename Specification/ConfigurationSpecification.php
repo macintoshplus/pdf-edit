@@ -13,11 +13,11 @@ class ConfigurationSpecification extends CompositeSpecification
 	private $compose;
 	public function __construct()
 	{
-		$this->compose = new KeysArrayExistsSpecification(['pages', 'orientation', 'size', 'font', 'font-size'])
-							->and(new PagesExistsSpecification())
-							->and(new OrientationSpecification())
-							->and(new PageSizeSpecification())
-							;
+		$this->compose = new KeysArrayExistsSpecification(['pages', 'orientation', 'size', 'font', 'font-size']);
+		$this->compose->addAnd(new PagesExistsSpecification())
+						->addAnd(new OrientationSpecification())
+						->addAnd(new PageSizeSpecification())
+						;
 	}
 
 	public function isSatisfiedBy($object)
