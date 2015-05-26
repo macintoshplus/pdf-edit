@@ -79,7 +79,7 @@ class PdfEdit
 	 */
 	private function computePage()
 	{
-		if (array_key_exists($this->currentPage, $this->config['pages'])) {
+		if (!array_key_exists($this->currentPage, $this->config['pages'])) {
 			return;
 		}
 
